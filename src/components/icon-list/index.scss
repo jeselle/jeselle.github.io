@@ -1,11 +1,9 @@
 .cs-icon-list {
 	a {
-		margin: 1rem 1.5rem;
-		font-size: 2.3rem;
-		color: lightgray;
+		font-size: 1rem;
 
-		& {
-			color: lightblue;
+		&:hover {
+			color: black;
 		}
 	}
 }

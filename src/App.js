@@ -2,12 +2,12 @@ import React from 'react';
 import './App.scss';
 // import Home from './pages/home';
 // import Books from './pages/books';
-import ContributionPage from './pages/contribution';
+import Home from './pages/home';
 
 function App() {
 	return (
 		<div className="App">
-			<ContributionPage />
+			<Home></Home>
 		</div>
 	);
 }

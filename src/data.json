@@ -1,70 +1,64 @@
 {
     "tiles": [
         {
-            "title": "Hello World",
-            "subTitle": "yolo swag",
+            "title": "Temp",
+            "subTitle": "11/03/2019",
             "description": "Here is a long description, Here is a long description, Here is a long description.",
-            "image": "",
+            "image": "1.jpg",
             "imageAltText": "",
             "githubLink": "",
-            "link": "",
-            "flip": "",
-            "category": ""
+            "link": "www.google.com",
+            "category": "dance"
         },
         {
-            "title": "",
-            "subTitle": "",
-            "description": "",
-            "image": "",
+            "title": "Silver Dog",
+            "subTitle": "Jeselle Clark",
+            "description": "Here is a long description, Here is a long description, Here is a long description.",
+            "image": "2.jpg",
             "imageAltText": "",
-            "githubLink": "",
+            "githubLink": "www.github.com",
             "link": "",
-            "flip": "",
-            "category": ""
+            "category": "bio"
         },
         {
-            "title": "",
-            "subTitle": "",
-            "description": "",
-            "image": "",
+            "title": "The Blue Moon",
+            "subTitle": "Sub Header Info",
+            "description": "Here is a long description, Here is a long description, Here is a long description.",
+            "image": "3.jpg",
             "imageAltText": "",
             "githubLink": "",
             "link": "",
-            "flip": "",
-            "category": ""
+            "category": "dance"
         },
         {
-            "title": "",
-            "subTitle": "",
-            "description": "",
-            "image": "",
+            "title": "Bio Plant",
+            "subTitle": "Life is Good",
+            "description": "Here is a long description, Here is a long description, Here is a long description.",
+            "image": "4.jpg",
             "imageAltText": "",
             "githubLink": "",
             "link": "",
-            "flip": "",
-            "category": ""
+            "category": "bio"
         },
         {
-            "title": "",
+            "title": "Star Trek",
             "subTitle": "",
-            "description": "",
-            "image": "",
+            "description": "Here is a long description, Here is a long description, Here is a long description.",
+            "image": "1.jpg",
             "imageAltText": "",
             "githubLink": "",
             "link": "",
-            "flip": "",
-            "category": ""
+            "category": "tech"
         },
         {
-            "title": "",
-            "subTitle": "",
-            "description": "",
-            "image": "",
+            "title": "Blast From the Past",
+            "subTitle": "Is the future",
+            "description": "Here is a long description, Here is a long description, Here is a long description.",
+            "image": "2.jpg",
             "imageAltText": "",
             "githubLink": "",
             "link": "",
-            "flip": "",
-            "category": ""
+            "category": "dance"
         }
     ]
 }
