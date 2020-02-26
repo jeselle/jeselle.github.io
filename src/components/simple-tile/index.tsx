@@ -82,7 +82,7 @@ const Tile = styled.div`
 	}
 
 	@media (min-width: 320px) and (max-width: 480px) {
-		height: 100px;
+		height: 75px;
 	}
 
 	@media (min-width: 0) and (max-width: 320px) {
@@ -91,9 +91,36 @@ const Tile = styled.div`
 `;
 
 const TopRow = styled.div`
-	margin-bottom: 10px;
 	display: flex;
 	justify-content: space-between;
+
+	@media (min-width: 1281px) {
+		margin-bottom: 10px;
+	}
+
+	@media (min-width: 1025px) and (max-width: 1280px) {
+		margin-bottom: 10px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+		margin-bottom: 8px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+		margin-bottom: 6px;
+	}
+
+	@media (min-width: 481px) and (max-width: 767px) {
+		margin-bottom: 4px;
+	}
+
+	@media (min-width: 320px) and (max-width: 480px) {
+		margin-bottom: 3px;
+	}
+
+	@media (min-width: 0) and (max-width: 320px) {
+		margin-bottom: 2px;
+	}
 `;
 
 const Category =
@@ -127,7 +154,7 @@ const Category =
 	}
 
 	@media (min-width: 320px) and (max-width: 480px) {
-  font-size: 8px;
+  font-size: 6px;
 	}
 
 	@media (min-width: 0) and (max-width: 320px) {
@@ -135,7 +162,72 @@ const Category =
 	}
 `;
 
-const Image = styled.img`max-width: 500px;`;
+const Image = styled.img`
+	max-width: 500px;
+
+	@media (min-width: 1281px) {
+		width: 40%;
+	}
+
+	@media (min-width: 1025px) and (max-width: 1280px) {
+		width: 45%;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+		width: 45%;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+		width: 45%;
+	}
+
+	@media (min-width: 481px) and (max-width: 767px) {
+		width: 50%;
+	}
+
+	@media (min-width: 320px) and (max-width: 480px) {
+		width: 50%;
+	}
+
+	@media (min-width: 0) and (max-width: 320px) {
+		width: 50%;
+	}
+`;
+
+const Title = styled.div`
+	padding-bottom: 5px;
+	font-size: 24px;
+	font-weight: 600;
+	color: black;
+
+	@media (min-width: 1281px) {
+		font-size: 24px;
+	}
+
+	@media (min-width: 1025px) and (max-width: 1280px) {
+		font-size: 24px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+		font-size: 20px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+		font-size: 18px;
+	}
+
+	@media (min-width: 481px) and (max-width: 767px) {
+		font-size: 14px;
+	}
+
+	@media (min-width: 320px) and (max-width: 480px) {
+		font-size: 10px;
+	}
+
+	@media (min-width: 0) and (max-width: 320px) {
+		font-size: 10px;
+	}
+`;
 
 const ContentSection = styled.div`
 	text-align: left;
@@ -170,41 +262,6 @@ const ContentSection = styled.div`
 	}
 `;
 
-const Title = styled.div`
-	padding-bottom: 5px;
-	font-size: 24px;
-	font-weight: 600;
-	color: black;
-
-	@media (min-width: 1281px) {
-		font-size: 24px;
-	}
-
-	@media (min-width: 1025px) and (max-width: 1280px) {
-		font-size: 24px;
-	}
-
-	@media (min-width: 768px) and (max-width: 1024px) {
-		font-size: 20px;
-	}
-
-	@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-		font-size: 18px;
-	}
-
-	@media (min-width: 481px) and (max-width: 767px) {
-		font-size: 16px;
-	}
-
-	@media (min-width: 320px) and (max-width: 480px) {
-		font-size: 16px;
-	}
-
-	@media (min-width: 0) and (max-width: 320px) {
-		height: 50px;
-	}
-`;
-
 const SubTitle = styled.div`
 	padding: 0 0 20px 0;
 	font-size: 10px;
@@ -224,7 +281,7 @@ const SubTitle = styled.div`
 	}
 
 	@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-		font-size: 10px;
+		font-size: 8px;
 	}
 
 	@media (min-width: 481px) and (max-width: 767px) {
