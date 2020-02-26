@@ -29,20 +29,64 @@ export interface SimpleTileProps {
 }
 
 const Tile = styled.div`
+	@mixin grow($amount) {
+		transform: scale(1, 1);
+
+		&:hover {
+			transform: scale(amount, amount);
+		}
+	}
+
+	@mixin shiftLeft($amount) {
+		transform: translateX(0);
+
+		&:hover {
+			transform: translateX(calc(amount * -1));
+		}
+	}
+
 	margin: 60px 0;
 	display: flex;
-	justify-content: space-between;
-	height: 250px;
+	justify-content: flex-start;
 	width: 100%;
 	transition: all .2s;
-	transform: translateY(0px);
+	transform: scale(1, 1);
 
 	&:hover,
 	&:focus {
 		/* box-shadow: 0 4px 7px #656565; */
 		/* transform: translateY(-1px); */
+
+		transform: scale(1.01, 1.01);
 		box-shadow: 0 4px 15px -5px #656565;
-		cursor: pointer;
+	}
+
+	@media (min-width: 1281px) {
+		height: 250px;
+	}
+
+	@media (min-width: 1025px) and (max-width: 1280px) {
+		height: 250px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+		height: 200px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+		height: 150px;
+	}
+
+	@media (min-width: 481px) and (max-width: 767px) {
+		height: 125px;
+	}
+
+	@media (min-width: 320px) and (max-width: 480px) {
+		height: 100px;
+	}
+
+	@media (min-width: 0) and (max-width: 320px) {
+		height: 50px;
 	}
 `;
 
@@ -57,18 +101,73 @@ const Category =
 	SimpleTileProps >
 	` 
   display: inline-block;
-  font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
-  color: ${(props: SimpleTileProps) => colorMap['dance']} 
+  color: ${(props: SimpleTileProps) => colorMap['dance']};
   /* // };(props.category.length > 0) ? colorMap["dance"] : "black" }; */
+
+  @media (min-width: 1281px) {
+  font-size: 14px;
+	}
+
+	@media (min-width: 1025px) and (max-width: 1280px) {
+  font-size: 14px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+  font-size: 12px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  font-size: 10px;
+	}
+
+	@media (min-width: 481px) and (max-width: 767px) {
+  font-size: 8px;
+	}
+
+	@media (min-width: 320px) and (max-width: 480px) {
+  font-size: 8px;
+	}
+
+	@media (min-width: 0) and (max-width: 320px) {
+  font-size: 6px;
+	}
 `;
 
-const Image = styled.img`max-width: 50%;`;
+const Image = styled.img`max-width: 500px;`;
 
 const ContentSection = styled.div`
-	padding: 5px 20px;
 	text-align: left;
+	overflow: auto;
+
+	@media (min-width: 1281px) {
+		padding: 20px;
+	}
+
+	@media (min-width: 1025px) and (max-width: 1280px) {
+		padding: 20px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+		padding: 16px 20px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+		padding: 14px 20px;
+	}
+
+	@media (min-width: 481px) and (max-width: 767px) {
+		padding: 10px 20px;
+	}
+
+	@media (min-width: 320px) and (max-width: 480px) {
+		padding: 8px 20px;
+	}
+
+	@media (min-width: 0) and (max-width: 320px) {
+		padding: 4px 20px;
+	}
 `;
 
 const Title = styled.div`
@@ -76,6 +175,34 @@ const Title = styled.div`
 	font-size: 24px;
 	font-weight: 600;
 	color: black;
+
+	@media (min-width: 1281px) {
+		font-size: 24px;
+	}
+
+	@media (min-width: 1025px) and (max-width: 1280px) {
+		font-size: 24px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+		font-size: 20px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+		font-size: 18px;
+	}
+
+	@media (min-width: 481px) and (max-width: 767px) {
+		font-size: 16px;
+	}
+
+	@media (min-width: 320px) and (max-width: 480px) {
+		font-size: 16px;
+	}
+
+	@media (min-width: 0) and (max-width: 320px) {
+		height: 50px;
+	}
 `;
 
 const SubTitle = styled.div`
@@ -83,6 +210,34 @@ const SubTitle = styled.div`
 	font-size: 10px;
 	font-weight: 700;
 	color: gray;
+
+	@media (min-width: 1281px) {
+		font-size: 10px;
+	}
+
+	@media (min-width: 1025px) and (max-width: 1280px) {
+		font-size: 10px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+		font-size: 10px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+		font-size: 10px;
+	}
+
+	@media (min-width: 481px) and (max-width: 767px) {
+		font-size: 8px;
+	}
+
+	@media (min-width: 320px) and (max-width: 480px) {
+		font-size: 6px;
+	}
+
+	@media (min-width: 0) and (max-width: 320px) {
+		font-size: 6px;
+	}
 `;
 
 const Description = styled.div`
@@ -90,6 +245,34 @@ const Description = styled.div`
 	font-weight: 400;
 	color: #272727;
 	font-family: "Lato", sans-serif;
+
+	@media (min-width: 1281px) {
+		font-size: 16px;
+	}
+
+	@media (min-width: 1025px) and (max-width: 1280px) {
+		font-size: 14px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+		font-size: 14px;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+		font-size: 12px;
+	}
+
+	@media (min-width: 481px) and (max-width: 767px) {
+		font-size: 10px;
+	}
+
+	@media (min-width: 320px) and (max-width: 480px) {
+		font-size: 8px;
+	}
+
+	@media (min-width: 0) and (max-width: 320px) {
+		font-size: 6px;
+	}
 `;
 
 const columns = (props: SimpleTileProps): Array<any> => {

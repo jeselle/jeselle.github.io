@@ -3,6 +3,20 @@ import { ThemeProvider } from 'styled-components';
 // import theme from './theme.yml';
 
 const theme = {
+	default: {
+		colors: {
+			header: '#000000',
+			header_hover: '#000000',
+			sub_header: '#gray',
+			sub_header_hover: '#gray',
+			text: '#272727',
+			text_hover: '#272727',
+			box_shadow: '#656565',
+			box_shadow_hover: '#656565',
+			category_color: '#e09100',
+			category_color_hover: '#e09100'
+		}
+	},
 	dance: {
 		colors: {
 			powderWhite: '#FFFDF9',

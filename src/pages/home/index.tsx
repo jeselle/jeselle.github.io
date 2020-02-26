@@ -8,8 +8,39 @@ import './index.scss';
 
 const SiteGrid = styled.div`
 	display: grid;
-	grid-template-columns: 5vw 10vw 70vw 10vw 5vw;
 	grid-template-rows: 30vh auto 200px;
+
+	@media (min-width: 1680px) {
+		grid-template-columns: 5vw 20vw 50vw 20vw 5vw;
+	}
+
+	@media (min-width: 1280px) and (max-width: 1680px) {
+		grid-template-columns: 5vw 15vw 60vw 15vw 5vw;
+	}
+
+	@media (min-width: 1025px) and (max-width: 1280px) {
+		grid-template-columns: 5vw 10vw 70vw 10vw 5vw;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) {
+		grid-template-columns: 5vw 10vw 70vw 10vw 5vw;
+	}
+
+	@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+		grid-template-columns: 5vw 10vw 70vw 10vw 5vw;
+	}
+
+	@media (min-width: 481px) and (max-width: 767px) {
+		grid-template-columns: 5vw 10vw 70vw 10vw 5vw;
+	}
+
+	@media (min-width: 320px) and (max-width: 480px) {
+		grid-template-columns: 5vw 10vw 70vw 10vw 5vw;
+	}
+
+	@media (min-width: 0) and (max-width: 320px) {
+		grid-template-columns: 5vw 10vw 70vw 10vw 5vw;
+	}
 `;
 
 const Content = styled.div`
