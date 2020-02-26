@@ -1,14 +1,17 @@
 {
     "compilerOptions": {
-        "module": "system",
+        "module": "es6",
         "lib": ["ES7"],
         "noImplicitAny": true,
         "moduleResolution": "node",
         "removeComments": true,
         "preserveConstEnums": true,
-        "outFile": "../../built/local/tsc.js",
+        // "outFile": "../../built/local/tsc.js",
         "sourceMap": true,
-        "jsx": "react"
+        "jsx": "react",
+        "typeRoots": [ "./types", "./node_modules/@types"],
+        "resolveJsonModule": true,
+        "esModuleInterop": true  
     },
     "include": [
         "src/**/*"
