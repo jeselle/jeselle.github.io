@@ -2,6 +2,8 @@ import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 // import theme from './theme.yml';
 
+export type CurrentTheme = 'default' | 'dance' | 'bio';
+
 const theme = {
 	default: {
 		colors: {

@@ -5,12 +5,14 @@ const CHANGE_THEME = 'jeselle-site/theme/CHANGE';
 
 // currentTheme: dance, bio, something
 
+const initalState = { currentTheme: 'default' };
+
 // Reducer
-export default function reducer(state = {}, action = {}) {
+export default function reducer(state = initalState, action = {}) {
 	switch (action.type) {
 		case CHANGE_THEME: {
 			return Object.assign({}, state, {
-				theme: action.currentTheme
+				currentTheme: action.currentTheme
 			});
 		}
 		// do reducer stuff

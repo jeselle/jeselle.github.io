@@ -4,6 +4,7 @@ import testData from '../../data.json';
 import styled from 'styled-components';
 import { uuid } from 'uuidv4';
 import { connect } from 'react-redux';
+import { CurrentTheme } from '../../components/theme';
 import './index.scss';
 
 const SiteGrid = styled.div`
@@ -50,7 +51,7 @@ const Content = styled.div`
 `;
 
 interface HomePageProps {
-	currentTheme: string;
+	currentTheme: CurrentTheme;
 }
 
 const HomePage: FunctionComponent<HomePageProps> = ({ currentTheme }: HomePageProps) => {
@@ -58,8 +59,8 @@ const HomePage: FunctionComponent<HomePageProps> = ({ currentTheme }: HomePagePr
 		<SiteGrid>
 			<Content>
 				{(() => {
-					return testData.tiles.map((tile: SimpleTileProps) => {
-						return <SimpleTile key={uuid()} currentTheme={currentTheme} {...tile} />;
+					return testData.tiles.map((tile: SimpleTileProps, i: number) => {
+						return <SimpleTile key={uuid()} currentTheme={currentTheme} flip={i % 2 === 0} {...tile} />;
 					});
 				})()}
 			</Content>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import IconList from '../icon-list';
-import { uuid } from 'uuidv4';
+import { CurrentTheme } from '../../components/theme';
 
 // interface colorMapInternship {
 //   bio: string,
@@ -24,8 +24,9 @@ export interface SimpleTileProps {
 	githubLink?: string;
 	link?: string;
 	category?: string;
-	currentTheme?: string;
+	currentTheme?: CurrentTheme;
 	flip?: boolean;
+	theme?: any;
 }
 
 const Tile = styled.div`
@@ -130,7 +131,8 @@ const Category =
   display: inline-block;
   font-weight: 400;
   text-transform: uppercase;
-  color: ${(props: SimpleTileProps) => colorMap['dance']};
+  color: ${(props: SimpleTileProps) =>
+		props.theme[props.currentTheme] ? props.theme[props.currentTheme].colors.category_color : 'black'};
   /* // };(props.category.length > 0) ? colorMap["dance"] : "black" }; */
 
   @media (min-width: 1281px) {
@@ -333,7 +335,7 @@ const Description = styled.div`
 `;
 
 const columns = (props: SimpleTileProps): Array<any> => {
-	const { title, description, subTitle, image, imageAltText, githubLink, link, category } = props;
+	const { title, description, subTitle, image, imageAltText, githubLink, link, category, currentTheme } = props;
 
 	const iconList = [];
 
@@ -357,15 +359,15 @@ const columns = (props: SimpleTileProps): Array<any> => {
 
 	return [
 		// @ts-ignore
-		<Image key={uuid()} src={`/images/${image}`} alt={imageAltText} />,
-		<ContentSection key={uuid()}>
-			<TopRow>
-				<Category category={category}>{category}</Category>
+		<Image src={`/images/${image}`} alt={imageAltText} />,
+		<ContentSection {...props}>
+			<TopRow {...props}>
+				<Category {...props}>{category}</Category>
 				<IconList icons={iconList} />
 			</TopRow>
-			<Title>{title}</Title>
-			<SubTitle>{subTitle}</SubTitle>
-			<Description>{description}</Description>
+			<Title {...props}>{title}</Title>
+			<SubTitle {...props}>{subTitle}</SubTitle>
+			<Description {...props}>{description}</Description>
 		</ContentSection>
 	];
 };
