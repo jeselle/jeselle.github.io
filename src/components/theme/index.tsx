@@ -21,16 +21,44 @@ const theme = {
 	},
 	dance: {
 		colors: {
-			powderWhite: '#FFFDF9',
-			persianGreen: '#06B49A',
-			lightBlue: '#AFDBD2',
-			onyx: '#36313D'
-		},
-		fonts: [ 'sans-serif', 'Roboto' ],
-		fontSizes: {
-			small: '1em',
-			medium: '2em',
-			large: '3em'
+			header: '#000000',
+			header_hover: '#000000',
+			sub_header: '#gray',
+			sub_header_hover: '#gray',
+			text: '#272727',
+			text_hover: '#272727',
+			box_shadow: '#656565',
+			box_shadow_hover: '#656565',
+			category_color: '#e09100',
+			category_color_hover: '#e09100'
+		}
+	},
+	tech: {
+		colors: {
+			header: '#000000',
+			header_hover: '#000000',
+			sub_header: '#gray',
+			sub_header_hover: '#gray',
+			text: '#272727',
+			text_hover: '#272727',
+			box_shadow: '#656565',
+			box_shadow_hover: '#656565',
+			category_color: 'blue',
+			category_color_hover: 'blue'
+		}
+	},
+	bio: {
+		colors: {
+			header: '#000000',
+			header_hover: '#000000',
+			sub_header: '#gray',
+			sub_header_hover: '#gray',
+			text: '#272727',
+			text_hover: '#272727',
+			box_shadow: '#656565',
+			box_shadow_hover: '#656565',
+			category_color: 'green',
+			category_color_hover: 'green'
 		}
 	}
 };

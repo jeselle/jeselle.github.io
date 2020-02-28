@@ -125,15 +125,20 @@ const TopRow = styled.div`
 `;
 
 const Category =
-	styled.div <
+	styled.a <
 	SimpleTileProps >
 	` 
   display: inline-block;
   font-weight: 400;
   text-transform: uppercase;
-  color: ${(props: SimpleTileProps) =>
-		props.theme[props.currentTheme] ? props.theme[props.currentTheme].colors.category_color : 'black'};
-  /* // };(props.category.length > 0) ? colorMap["dance"] : "black" }; */
+  color: ${(props: SimpleTileProps) => props.theme[props.category].colors.category_color};
+
+  &:hover,
+  &:focus { 
+    color:  ${(props: SimpleTileProps) => props.theme[props.category].colors.category_color_hover};
+    cursor: pointer;
+    text-decoration: underline;
+  }
 
   @media (min-width: 1281px) {
   font-size: 14px;
@@ -167,6 +172,11 @@ const Category =
 const Image = styled.img`
 	max-width: 500px;
 
+	&:hover,
+	&:focus {
+		cursor: pointer;
+	}
+
 	@media (min-width: 1281px) {
 		width: 40%;
 	}
@@ -196,11 +206,17 @@ const Image = styled.img`
 	}
 `;
 
-const Title = styled.div`
+const Title = styled.a`
 	padding-bottom: 5px;
 	font-size: 24px;
 	font-weight: 600;
-	color: black;
+	color: ${(props: SimpleTileProps) => props.theme[props.category].colors.header};
+
+	&:hover,
+	&:focus {
+		color: ${(props: SimpleTileProps) => props.theme[props.category].colors.header_hover};
+		cursor: pointer;
+	}
 
 	@media (min-width: 1281px) {
 		font-size: 24px;
@@ -268,7 +284,12 @@ const SubTitle = styled.div`
 	padding: 0 0 20px 0;
 	font-size: 10px;
 	font-weight: 700;
-	color: gray;
+	color: ${(props: SimpleTileProps) => props.theme[props.category].colors.sub_header};
+
+	&:hover,
+	&:focus {
+		color: ${(props: SimpleTileProps) => props.theme[props.category].colors.sub_header_hover};
+	}
 
 	@media (min-width: 1281px) {
 		font-size: 10px;
@@ -302,8 +323,13 @@ const SubTitle = styled.div`
 const Description = styled.div`
 	font-size: 16px;
 	font-weight: 400;
-	color: #272727;
 	font-family: "Lato", sans-serif;
+	color: ${(props: SimpleTileProps) => props.theme[props.category].colors.text};
+
+	&:hover,
+	&:focus {
+		color: ${(props: SimpleTileProps) => props.theme[props.category].colors.text_hover};
+	}
 
 	@media (min-width: 1281px) {
 		font-size: 16px;
@@ -339,6 +365,9 @@ const columns = (props: SimpleTileProps): Array<any> => {
 
 	const iconList = [];
 
+	const onClickLinkHandler = (e: MouseEvent) => {};
+	const onClickCateogryHandeler = (e: MouseEvent) => {};
+
 	if (githubLink.length > 0) {
 		iconList.push({
 			link: githubLink,
@@ -359,10 +388,12 @@ const columns = (props: SimpleTileProps): Array<any> => {
 
 	return [
 		// @ts-ignore
-		<Image src={`/images/${image}`} alt={imageAltText} />,
+		<Image src={`/images/${image}`} onClick={onClickLinkHandler} alt={imageAltText} />,
 		<ContentSection {...props}>
 			<TopRow {...props}>
-				<Category {...props}>{category}</Category>
+				<Category {...props} onClick={onClickCateogryHandeler}>
+					{category}
+				</Category>
 				<IconList icons={iconList} />
 			</TopRow>
 			<Title {...props}>{title}</Title>
