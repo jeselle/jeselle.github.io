@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { uuid } from 'uuidv4';
 import { connect } from 'react-redux';
 import { CurrentTheme } from '../../components/theme';
+import Banner from '../../components/banner';
 import './index.scss';
 
 const SiteGrid = styled.div`
@@ -57,6 +58,7 @@ interface HomePageProps {
 const HomePage: FunctionComponent<HomePageProps> = ({ currentTheme }: HomePageProps) => {
 	return (
 		<SiteGrid>
+			<Banner />
 			<Content>
 				{(() => {
 					return testData.tiles.map((tile: SimpleTileProps, i: number) => {
