@@ -10,7 +10,7 @@ import './index.scss';
 
 const SiteGrid = styled.div`
 	display: grid;
-	grid-template-rows: 30vh auto 200px;
+	grid-template-rows: 60vh auto 400px;
 
 	@media (min-width: 1680px) {
 		grid-template-columns: 5vw 20vw 50vw 20vw 5vw;
@@ -58,7 +58,7 @@ interface HomePageProps {
 const HomePage: FunctionComponent<HomePageProps> = ({ currentTheme }: HomePageProps) => {
 	return (
 		<SiteGrid>
-			<Banner />
+			<Banner bgImage="/images/bg.jpg" title="Jeselle Clark" subTitle="Bio | Tech | Dance" />
 			<Content>
 				{(() => {
 					return testData.tiles.map((tile: SimpleTileProps, i: number) => {
