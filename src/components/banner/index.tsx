@@ -1,24 +1,38 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Particles from 'react-particles-js';
 
 export interface BannerProps {
-	bgImage: string;
+	bgImage?: string;
+	particals_background?: Object;
 	title: string;
 	subTitle: string;
+	currentTheme: string;
 }
 
-const Container = styled.div`
+//
+const Container =
+	styled.div <
+	BannerProps >
+	`
 	grid-area: 1 / 1 / 1 / 6;
 	clip-path: ellipse(100% 87% at 15px 10%);
-	background: linear-gradient(45deg, #4568dc, #b06ab3);
+  background: ${(props) => props.theme[props.currentTheme].colors.site_bg};
 `;
 
-const BackgroundImage = styled.img`
+// const BackgroundImage = styled.img`
+// 	width: 100%;
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	opacity: 0.2;
+// `;
+
+const ParticalWrapper = styled.div`
 	width: 100%;
+	height: 100%;
 	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0.2;
+	opacity: 0.5;
 `;
 
 const Title = styled.div`
@@ -46,11 +60,14 @@ const TextWrapper = styled.div`
 `;
 
 const Banner: React.FunctionComponent<BannerProps> = (props) => {
-	const { bgImage, title, subTitle } = props;
+	const { bgImage, title, subTitle, particals_background } = props;
 
 	return (
-		<Container>
-			<BackgroundImage src={bgImage} />
+		<Container {...props}>
+			{/* <BackgroundImage src={bgImage} /> */}
+			<ParticalWrapper>
+				<Particles params={particals_background} />
+			</ParticalWrapper>
 			<TextWrapper>
 				<Title>{title}</Title>
 				<SubTitle>{subTitle}</SubTitle>

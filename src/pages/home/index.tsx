@@ -58,7 +58,13 @@ interface HomePageProps {
 const HomePage: FunctionComponent<HomePageProps> = ({ currentTheme }: HomePageProps) => {
 	return (
 		<SiteGrid>
-			<Banner bgImage="/images/bg.jpg" title="Jeselle Clark" subTitle="Bio | Tech | Dance" />
+			<Banner
+				bgImage="/images/bio_bg.jpg"
+				particals_background={testData.themes.bio.partical_params}
+				title="Jeselle Clark"
+				subTitle="Bio | Tech | Dance"
+				currentTheme={currentTheme}
+			/>
 			<Content>
 				{(() => {
 					return testData.tiles.map((tile: SimpleTileProps, i: number) => {

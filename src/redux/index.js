@@ -5,7 +5,7 @@ const CHANGE_THEME = 'jeselle-site/theme/CHANGE';
 
 // currentTheme: dance, bio, something
 
-const initalState = { currentTheme: 'default' };
+const initalState = { currentTheme: 'bio' };
 
 // Reducer
 export default function reducer(state = initalState, action = {}) {

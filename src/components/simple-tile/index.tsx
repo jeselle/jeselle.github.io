@@ -9,17 +9,13 @@ import { CurrentTheme } from '../../components/theme';
 //   tech: string
 // }
 
-const colorMap = {
-	bio: 'green',
-	dance: '#e09100',
-	tech: 'aqua'
-};
-
 export interface SimpleTileProps {
 	title?: string;
 	subTitle?: string;
 	description?: string;
 	image?: string;
+	background_image?: string;
+	background_color?: string;
 	imageAltText?: string;
 	githubLink?: string;
 	link?: string;
@@ -124,10 +120,8 @@ const TopRow = styled.div`
 	}
 `;
 
-const Category =
-	styled.a <
-	SimpleTileProps >
-	` 
+// prettier-ignore
+const Category = styled.a<SimpleTileProps>` 
   display: inline-block;
   font-weight: 400;
   text-transform: uppercase;
@@ -141,31 +135,31 @@ const Category =
   }
 
   @media (min-width: 1281px) {
-  font-size: 14px;
+    font-size: 14px;
 	}
 
 	@media (min-width: 1025px) and (max-width: 1280px) {
-  font-size: 14px;
+    font-size: 14px;
 	}
 
 	@media (min-width: 768px) and (max-width: 1024px) {
-  font-size: 12px;
+    font-size: 12px;
 	}
 
 	@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  font-size: 10px;
+    font-size: 10px;
 	}
 
 	@media (min-width: 481px) and (max-width: 767px) {
-  font-size: 8px;
+    font-size: 8px;
 	}
 
 	@media (min-width: 320px) and (max-width: 480px) {
-  font-size: 6px;
+    font-size: 6px;
 	}
 
 	@media (min-width: 0) and (max-width: 320px) {
-  font-size: 6px;
+    font-size: 6px;
 	}
 `;
 
@@ -247,9 +241,13 @@ const Title = styled.a`
 	}
 `;
 
-const ContentSection = styled.div`
+// prettier-ignore
+const ContentSection = styled.div<SimpleTileProps>`
 	text-align: left;
 	overflow: auto;
+	background: ${(props) => props.theme[props.category].background_image};
+	background-color: ${(props) => props.theme[props.category].background_color};
+	background-blend-mode: hard-light;
 
 	@media (min-width: 1281px) {
 		padding: 20px;
