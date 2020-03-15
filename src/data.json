@@ -103,7 +103,7 @@
 							"nb_sides": 5
 						},
 						"image": {
-							"src": "images/cell.svg",
+							"src": "images/virus_1.svg",
 							"width": 20,
 							"height": 20
 						}
@@ -112,7 +112,7 @@
 						"value": 0.5,
 						"random": false,
 						"anim": {
-							"enable": false,
+							"enable": true,
 							"speed": 1,
 							"opacity_min": 0.1,
 							"sync": false
@@ -158,7 +158,7 @@
 							"mode": "repulse"
 						},
 						"onclick": {
-							"enable": false,
+							"enable": true,
 							"mode": "push"
 						},
 						"resize": true
