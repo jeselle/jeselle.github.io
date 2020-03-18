@@ -70,7 +70,7 @@ const theme = {
 			category_color_hover: 'green',
 			card_background_image: 'bio.jpg',
 			card_background_color: 'green',
-			site_bg: 'linear-gradient(300deg,#28ce14,#319618)'
+			site_bg: 'linear-gradient(60deg,#1458ce,#2fc1c1)'
 		}
 	}
 };

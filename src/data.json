@@ -84,7 +84,7 @@
 			"partical_params": {
 				"particles": {
 					"number": {
-						"value": 80,
+						"value": 12,
 						"density": {
 							"enable": true,
 							"value_area": 800
@@ -104,8 +104,8 @@
 						},
 						"image": {
 							"src": "images/virus_1.svg",
-							"width": 20,
-							"height": 20
+							"width": 200,
+							"height": 200
 						}
 					},
 					"opacity": {
@@ -119,7 +119,7 @@
 						}
 					},
 					"size": {
-						"value": 10,
+						"value": 100,
 						"random": true,
 						"anim": {
 							"enable": false,
@@ -132,8 +132,8 @@
 						"enable": false,
 						"distance": 300,
 						"color": "#ffffff",
-						"opacity": 0.4,
-						"width": 2
+						"opacity": 1,
+						"width": 20
 					},
 					"move": {
 						"enable": true,
@@ -144,7 +144,7 @@
 						"out_mode": "out",
 						"bounce": false,
 						"attract": {
-							"enable": false,
+							"enable": true,
 							"rotateX": 600,
 							"rotateY": 1200
 						}
@@ -159,7 +159,7 @@
 						},
 						"onclick": {
 							"enable": true,
-							"mode": "push"
+							"mode": "repulse"
 						},
 						"resize": true
 					},
@@ -178,7 +178,7 @@
 							"speed": 3
 						},
 						"repulse": {
-							"distance": 400,
+							"distance": 100,
 							"duration": 0.4
 						},
 						"push": {

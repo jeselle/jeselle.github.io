@@ -1,5 +1,25 @@
 @import './styles/vars';
 
+html {
+	font-size: 68.5%;
+
+	@media screen and (max-width: 1200px) {
+		font-size: 68.5%;
+	}
+
+	@media screen and (max-width: 1000px) {
+		font-size: 68.5%;
+	}
+
+	@media screen and (max-width: 800px) {
+		font-size: 60%;
+	}
+
+	@media screen and (max-width: 600px) {
+		font-size: 50%;
+	}
+}
+
 .App {
 	text-align: center;
 

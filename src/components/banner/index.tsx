@@ -36,7 +36,7 @@ const ParticalWrapper = styled.div`
 `;
 
 const Title = styled.div`
-	font-size: 80px;
+	font-size: 6rem;
 	font-family: 'Merienda One', 'Open Sans';
 	font-weight: 300;
 	color: white;
@@ -45,9 +45,10 @@ const Title = styled.div`
 `;
 
 const SubTitle = styled.div`
-	font-size: 30px;
+	font-size: 3rem;
 	font-family: 'Merienda One', 'Open Sans';
 	font-weight: 600;
+	opacity: 1;
 	color: white;
 `;
 
@@ -66,7 +67,7 @@ const Banner: React.FunctionComponent<BannerProps> = (props) => {
 		<Container {...props}>
 			{/* <BackgroundImage src={bgImage} /> */}
 			<ParticalWrapper>
-				<Particles params={particals_background} />
+				<Particles params={particals_background} height="600px" />
 			</ParticalWrapper>
 			<TextWrapper>
 				<Title>{title}</Title>
