@@ -62,13 +62,13 @@ const Title = styled.div`
 
 const SubTitleItem = styled.div<SubTitleItemProps>`
 	margin-top: 20px;
-	width: 100%;
+	padding: 0 10px 0 0;
 	font-size: 3rem;
 	font-family: 'Merienda One', 'Open Sans';
 	font-weight: 600;
 	opacity: 1;
 	color: ${props => {
-		return props.theme[props.subType].colors.subHeader
+		return props.theme[props.subType].colors.sub_header
 	}};
 	text-align: left;
 	z-index: 1;
@@ -76,17 +76,24 @@ const SubTitleItem = styled.div<SubTitleItemProps>`
 	@media screen and (max-width: 600px) {
 		text-align: center;
 	}
+	
+	&:hover {
+		cursor: pointer;
+		color: ${props => {
+			return props.theme[props.subType].colors.sub_header_hover
+		}};
+	}
 `;
 
 const SubTitle = styled.div`
-	margin-top: 20px;
 	width: 100%;
 	font-size: 3rem;
 	font-family: 'Merienda One', 'Open Sans';
 	font-weight: 600;
 	opacity: 1;
-	text-align: left;
 	z-index: 1;
+	display: flex;
+	justify-content: flex-start;
 
 	@media screen and (max-width: 600px) {
 		text-align: center;
@@ -117,11 +124,18 @@ const Banner: React.FunctionComponent<BannerProps> = (props) => {
 						(() => {
 							return Object.keys(subTitle).map((subType) => {
 								const newSubType = subType as CurrentTheme;
-								return (
-									<SubTitleItem subType={newSubType}>
-										{subTitle[newSubType]}
-									</SubTitleItem>
-								)
+								{console.log(newSubType)}
+								let component = (() => {
+									{console.log(subTitle[newSubType].length)}
+									if (subTitle[newSubType].length > 0){
+										return (
+											<SubTitleItem subType={newSubType}>
+												{subTitle[newSubType]}
+											</SubTitleItem>
+										)
+									}
+								})()
+								return component;
 							})
 						})()
 					}
@@ -132,3 +146,4 @@ const Banner: React.FunctionComponent<BannerProps> = (props) => {
 };
 
 export default Banner;
+
