@@ -62,7 +62,13 @@ const HomePage: FunctionComponent<HomePageProps> = ({ currentTheme }: HomePagePr
 				bgImage="/images/bio_bg.jpg"
 				particals_background={testData.themes.bio.partical_params}
 				title="K. Jeselle Clark"
-				subTitle="Bio | Tech | Dance | Shenanigans"
+				subTitle={{
+					default: '',
+					bio: 'Bio',
+					tech: 'Tech',
+					dance: 'Dance',
+					shenans: 'Shenanigans'
+				}}
 				currentTheme={currentTheme}
 			/>
 			<Content>

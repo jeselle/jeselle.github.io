@@ -2,7 +2,15 @@ import * as React from 'react';
 import { ThemeProvider } from 'styled-components';
 // import theme from './theme.yml';
 
-export type CurrentTheme = 'default' | 'dance' | 'bio';
+export type CurrentTheme = 'default' | 'dance' | 'tech' | 'bio' | 'shenans';
+
+export interface CurrentThemeMap {
+	default: string;
+	bio: string;
+	tech: string;
+	dance: string;
+	shenans: string;
+}
 
 const theme = {
 	default: {
@@ -37,6 +45,23 @@ const theme = {
 			card_background_image: 'dance.jpg',
 			card_background_color: 'green',
 			site_bg: 'linear-gradient(45deg, #4568dc, #b06ab3)'
+		}
+	},
+	shenans: {
+		colors: {
+			header: '#000000',
+			header_hover: '#000000',
+			sub_header: '#gray',
+			sub_header_hover: '#gray',
+			text: '#272727',
+			text_hover: '#272727',
+			box_shadow: '#656565',
+			box_shadow_hover: '#656565',
+			category_color: '#e09100',
+			category_color_hover: '#e09100',
+			card_background_image: 'dance.jpg',
+			card_background_color: 'green',
+			site_bg: 'linear-gradient(45deg, #4568dc, #b06a83)'
 		}
 	},
 	tech: {

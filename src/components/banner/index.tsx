@@ -1,12 +1,18 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import {CurrentThemeMap, CurrentTheme} from '../theme';
+
 
 export interface BannerProps {
 	bgImage?: string;
 	particals_background?: Object;
 	title: string;
-	subTitle: string;
+	subTitle: CurrentThemeMap;
 	currentTheme: string;
+}
+
+export interface SubTitleItemProps {
+	subType: CurrentTheme
 }
 
 //
@@ -54,6 +60,24 @@ const Title = styled.div`
 	}
 `;
 
+const SubTitleItem = styled.div<SubTitleItemProps>`
+	margin-top: 20px;
+	width: 100%;
+	font-size: 3rem;
+	font-family: 'Merienda One', 'Open Sans';
+	font-weight: 600;
+	opacity: 1;
+	color: ${props => {
+		return props.theme[props.subType].colors.subHeader
+	}};
+	text-align: left;
+	z-index: 1;
+
+	@media screen and (max-width: 600px) {
+		text-align: center;
+	}
+`;
+
 const SubTitle = styled.div`
 	margin-top: 20px;
 	width: 100%;
@@ -61,7 +85,6 @@ const SubTitle = styled.div`
 	font-family: 'Merienda One', 'Open Sans';
 	font-weight: 600;
 	opacity: 1;
-	color: white;
 	text-align: left;
 	z-index: 1;
 
@@ -89,7 +112,20 @@ const Banner: React.FunctionComponent<BannerProps> = (props) => {
 			</ParticalWrapper> */}
 			<TextWrapper>
 				<Title>{title}</Title>
-				<SubTitle>{subTitle}</SubTitle>
+				<SubTitle>
+					{
+						(() => {
+							return Object.keys(subTitle).map((subType) => {
+								const newSubType = subType as CurrentTheme;
+								return (
+									<SubTitleItem subType={newSubType}>
+										{subTitle[newSubType]}
+									</SubTitleItem>
+								)
+							})
+						})()
+					}
+				</SubTitle>
 			</TextWrapper>
 		</Container>
 	);

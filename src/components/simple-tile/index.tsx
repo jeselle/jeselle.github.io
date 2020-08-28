@@ -3,11 +3,6 @@ import styled from 'styled-components';
 import IconList from '../icon-list';
 import { CurrentTheme } from '../../components/theme';
 
-// interface colorMapInternship {
-//   bio: string,
-//   dance: string,
-//   tech: string
-// }
 
 export interface SimpleTileProps {
 	title?: string;
