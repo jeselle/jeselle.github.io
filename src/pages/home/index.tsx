@@ -10,7 +10,7 @@ import './index.scss';
 
 const SiteGrid = styled.div`
 	display: grid;
-	grid-template-rows: 60vh auto 400px;
+	grid-template-rows: 38vh auto 400px;
 
 	@media (min-width: 1680px) {
 		grid-template-columns: 5vw 20vw 50vw 20vw 5vw;
@@ -61,8 +61,8 @@ const HomePage: FunctionComponent<HomePageProps> = ({ currentTheme }: HomePagePr
 			<Banner
 				bgImage="/images/bio_bg.jpg"
 				particals_background={testData.themes.bio.partical_params}
-				title="Jeselle Clark"
-				subTitle="Bio | Tech | Dance"
+				title="K. Jeselle Clark"
+				subTitle="Bio | Tech | Dance | Shenanigans"
 				currentTheme={currentTheme}
 			/>
 			<Content>

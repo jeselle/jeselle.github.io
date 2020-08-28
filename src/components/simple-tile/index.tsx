@@ -49,6 +49,7 @@ const Tile = styled.div`
 	width: 100%;
 	transition: all .2s;
 	transform: scale(1, 1);
+	box-shadow: 0 4px 15px -5px #656565;
 
 	&:hover,
 	&:focus {
@@ -56,7 +57,7 @@ const Tile = styled.div`
 		/* transform: translateY(-1px); */
 
 		transform: scale(1.01, 1.01);
-		box-shadow: 0 4px 15px -5px #656565;
+		box-shadow: 0 4px 18px -1px #001165;
 	}
 
 	@media (min-width: 1281px) {
