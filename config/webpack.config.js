@@ -130,6 +130,10 @@ module.exports = function(webpackEnv) {
 
   return {
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
+    // externals: {
+    //   jquery: 'jQuery',
+    //   jquery: '$',
+    // },
     // Stop compilation early in production
     bail: isEnvProduction,
     devtool: isEnvProduction
