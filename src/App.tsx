@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 // import Home from './pages/home';
 // import Books from './pages/books';
-import Home from './pages/home';
+import Home from './pages/alt-home';
 
 function App() {
 	return (

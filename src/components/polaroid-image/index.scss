@@ -1,0 +1,56 @@
+// body {
+// 	display: flex;
+// 	flex-flow: column nowrap;
+// 	margin: 0;
+// 	height: 100vh;
+// 	align-items: center;
+// 	justify-content: center;
+
+// 	background-color: #ccc;
+// 	font-family: Georgia, sans-serif;
+// 	text-align: center;
+// }
+
+#i {
+	display: none;
+}
+
+#c {
+	width: 100vw;
+	height: 100vh;
+}
+
+#drag-wrapper {
+	position: relative;
+
+	.drag-handle {
+		position: absolute;
+		width: 2em;
+		height: 2em;
+		margin: -1em;
+		border-radius: 100%;
+		box-sizing: border-box;
+
+		background: tomato;
+		border: 1px solid #444;
+		opacity: .7;
+		cursor: move;
+
+		&:nth-of-type(2) {
+			background: limegreen;
+		}
+		&:nth-of-type(3) {
+			background: cyan;
+		}
+		&:nth-of-type(4) {
+			background: dodgerblue;
+		}
+		&:nth-of-type(5) {
+			background: gold;
+		}
+
+		&::after {
+			//content: attr(data-corner);
+		}
+	}
+}
