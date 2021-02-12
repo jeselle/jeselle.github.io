@@ -34,7 +34,7 @@ var gulp                    = require("gulp"),
 gulp.task("browser-sync", function() {
     browserSync({
         server: {
-            baseDir: "dist"
+            baseDir: "docs"
         }
     });
 });
@@ -68,7 +68,7 @@ gulp.task("html", function() {
             minifyCSS: true
         }))
         // Where to store the finalized HTML
-        .pipe(gulp.dest("dist"));
+        .pipe(gulp.dest("docs"));
 });
 
 // CSS task
@@ -89,7 +89,7 @@ gulp.task("css", function() {
         // Show sizes of minified CSS files
         .pipe(size({ showFiles: true }))
         // Where to store the finalized CSS
-        .pipe(gulp.dest("dist/css"));
+        .pipe(gulp.dest("docs/css"));
 });
 
 // JS task
@@ -100,7 +100,7 @@ gulp.task("js", function() {
         // Concatenate all JS files into one
         .pipe(concat("production.js"))
         // Where to store the finalized JS
-        .pipe(gulp.dest("dist/js"));
+        .pipe(gulp.dest("docs/js"));
 });
 
 // Image task
@@ -111,8 +111,10 @@ gulp.task("images", function() {
         // Minify the images
         .pipe(imagemin())
         // Where to store the finalized images
-        .pipe(gulp.dest("dist/img"));
+        .pipe(gulp.dest("docs/img"));
 });
+
+gulp.task("build", ["html", "css", "js", "images"]);
 
 // Use default task to launch BrowserSync and watch all files
 gulp.task("default", ["browser-sync"], function () {

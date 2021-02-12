@@ -5,7 +5,8 @@
     "description": "This is a Gulp boilerplate that is part of the Pear HTML/Sass boilerplate",
     "private": true,
     "scripts": {
-        "start": "./node_modules/.bin/gulp"
+        "start": "./node_modules/.bin/gulp",
+        "build": "./node_modules/.bin/gulp build"
     },
     "devDependencies": {
         "browser-sync": "^2.26.3",
