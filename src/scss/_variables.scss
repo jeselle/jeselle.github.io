@@ -17,7 +17,7 @@ $green:                   #5F9300 !default;
 $orange:                  #f0ad4e !default;
 $tan:                     #F2EAE1 !default;
 $purple:                  #4d1b53 !default;
-$teal:                    #12bda0 !default;
+$teal:                    #34c5ad !default;
 
 
 // Color scheme
@@ -89,6 +89,7 @@ $breakpoint--sm:          600px !default;
 $breakpoint--md:          680px !default;
 $breakpoint--lg:          950px !default;
 $breakpoint--hg:          1050px !default;
+$breakpoint--xl:          1130px !default;
 
 // Max container width
 $max-container-width:     1200px !default;
@@ -109,9 +110,14 @@ $heading-mb:              $p-mb !default;
 // Links
 // -------------------------------------------------------------------
 // Link colors
-$link-color:              $primary-color !default;
-$link-hover-color:        darken($primary-color, 10%) !default;
-$active-link-color:       darken($primary-color, 25%) !default;
+$link-color:              $tertiary-color !default;
+$link-hover-color:        darken($tertiary-color, 10%) !default;
+$active-link-color:       darken($tertiary-color, 20%) !default;
+
+$link-color-on-tert:          $primary-color !default;
+$link-hover-color-on-tert:    darken($primary-color, 10%) !default;
+$active-link-color-on-tert:   darken($primary-color, 20%) !default;
+
 
 
 // Buttons
@@ -130,7 +136,7 @@ $form-padding:            .45rem .8rem .35rem !default;
 $border-color:            $secondary-color !default;
 $border-style:            solid !default;
 $border-radius:           3px !default;
-$border-width:            1px !default;
+$border-width:            3px !default;
 
 
 // Animations

@@ -26,3 +26,23 @@
     outline: 0;
     transition: color $fade;
 }
+
+.link_on_tert,
+.link_on_tert:link,
+.link_on_tert:visited{
+    color: $link-color-on-tert;
+    text-decoration: none;
+    transition: color $fade;
+}
+
+.link_on_tert:hover,
+.link_on_tert:focus {
+    color: $link-hover-color-on-tert;
+}
+
+.link_on_tert:active {
+    background-image: none;
+    color: $active-link-color-on-tert;
+    outline: 0;
+    transition: color $fade;
+}

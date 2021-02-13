@@ -108,3 +108,6 @@ hr {
 .font--heading           { font-family: $font-family--heading }
 .font--reading           { font-family: $font-family--reading }
 .font--ui                { font-family: $font-family--ui }
+
+//Used on the h1 header
+.shaddow                 { text-shadow: 2px 2px $darkest-gray;}
