@@ -125,7 +125,7 @@ gulp.task("default", ["browser-sync"], function () {
     });
     // Watch Sass files
     watch("src/scss/**/*", function () {
-        gulp.start('css', reload);
+        gulp.start("css", reload);
     });
     // Watch JS files
     watch("src/js/**/*", function () {
