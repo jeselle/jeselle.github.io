@@ -24,5 +24,8 @@
         "gulp-uglify": "^3.0.1",
         "gulp-util": "^3.0.8",
         "gulp-watch": "^5.0.1"
+    },
+    "dependencies": {
+        "@fortawesome/free-brands-svg-icons": "^5.15.2"
     }
 }
