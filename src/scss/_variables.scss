@@ -16,13 +16,13 @@ $blue:                    #428bca !default;
 $green:                   #5F9300 !default;
 $orange:                  #f0ad4e !default;
 $tan:                     #F2EAE1 !default;
-$purple:                  #823a8b !default;
+$purple:                  #4d1b53 !default;
 $teal:                    #12bda0 !default;
 
 
 // Color scheme
 $primary-color:           $purple !default;
-$secondary-color:         $tan !default;
+$secondary-color:         $orange !default;
 $tertiary-color:          $teal !default;
 
 
@@ -127,7 +127,7 @@ $form-padding:            .45rem .8rem .35rem !default;
 
 // Borders
 // -------------------------------------------------------------------
-$border-color:            $light-gray !default;
+$border-color:            $secondary-color !default;
 $border-style:            solid !default;
 $border-radius:           3px !default;
 $border-width:            1px !default;

@@ -10,7 +10,7 @@
 .centered-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.border--tan { border: 5px solid $tan; }
+.border--tertiary { border: 5px solid $tertiary-color; }
