@@ -20,9 +20,6 @@ a {
   transition: all 0.2s;
 }
 
-footer a:link, footer a:visited {
-	color: #FFF;
-}
 .tm-text-blue {
   color: #00ccfc;
 }
@@ -140,6 +137,10 @@ footer a:link, footer a:visited {
   margin-top: 70px;
   max-width: 420px;
 }
+.tm-section-4 {
+  margin-top: 70px;
+  max-width: 420px;
+}
 
 .tm-link:link,
 .tm-link:visited {
@@ -177,9 +178,29 @@ footer {
   font-weight: 300;
   margin-bottom: 30px;
   margin-left: 40px;
-  font-size: 0.95rem;
   margin-right: 40px;
   line-height: 2;
+}
+
+footer a:link, footer a:visited {
+	color: #FFF;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  color: white;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
 }
 
 /* Image Gallery */
@@ -362,7 +383,7 @@ figure.effect-goliath:hover p {
 }
 
 /* Contact */
-.tm-section-3 {
+. {
   width: 100%;
   max-width: 400px;
   margin-left: 40px;
