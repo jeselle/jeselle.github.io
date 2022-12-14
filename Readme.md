@@ -1,5 +1,7 @@
 # Personal Portfolio Template 🔥
 
+<!-- Editted by Jeselle Clark for personal use with open license-->
+
 > https://kukr.github.io/
 
 <!-- :star: Star me on GitHub — it helps! -->
